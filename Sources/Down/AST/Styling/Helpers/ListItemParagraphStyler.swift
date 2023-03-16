@@ -67,10 +67,10 @@ public class ListItemParagraphStyler {
         let contentIndentation = indentation
         let prefixIndentation: CGFloat = contentIndentation - options.spacingAfterPrefix - prefixWidth
         let prefixSpill = max(0, prefixWidth - largestPrefixWidth)
-        // let firstLineContentIndentation = contentIndentation + prefixSpill
+        let firstLineContentIndentation = contentIndentation + prefixSpill
 
         let style = baseStyle
-        style.firstLineHeadIndent = prefixIndentation
+        // style.firstLineHeadIndent = prefixIndentation
         style.tabStops = [tabStop(at: firstLineContentIndentation)]
         style.headIndent = contentIndentation
         return style
